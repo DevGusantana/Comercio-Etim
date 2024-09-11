@@ -1,0 +1,377 @@
+/* PADRÃO GERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+/*MAIN*/
+
+header{
+    background-image: url('img/Header-img.png');
+    color: #fff;
+    padding:25px 4%;
+}
+
+.layout{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo{
+    text-align: center;
+}
+
+header a h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.menu{
+    text-align: center;
+    font-size: 18px;
+}
+
+header a{
+    color: #858585;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px 30px;
+}
+
+main{
+    background-color: #fff;
+    padding: 20px 4%;;
+}
+
+section h1{
+    padding: 15px 0;
+    font-size: 35px;
+    text-align: center;
+}
+
+section p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.img{
+    text-align: center;
+    margin: 40px 2%;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*PLATAFORMA DE CRIAÇÃO PARA O E-COMMERCE*/
+
+.link{
+    text-align: center;
+    display: flex;
+}
+
+.link img{
+    text-align: center;
+    margin: 10px 2%;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+.link button{
+    margin:10px 2%
+}
+
+.B-Saiba-Mais button{
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1e0a4b;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #fff;
+}
+
+.B-Saiba-Mais button:hover{
+    box-shadow: 0px 0px 10px #000000c2;
+    transform: scale(1.07);
+}
+
+
+/*SITES DE COMÉRCIOS GRATUITOS, PAGOS E PARCERIAS*/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin:20px 5%;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 280px;
+}
+
+.animation {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform .6s ease;
+}
+
+.animation:hover {
+    transform: rotateY(180deg);
+}
+
+.frente, .tras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frente {
+    background-size: cover;
+    z-index: 2;
+}
+
+.tras {
+    background-color: #000;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.tras button {
+    padding: 10px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #10006d;
+}
+
+.tras button:hover {
+    box-shadow: 0px 0px 10px #ffffff;
+    transform: scale(1.07);
+}
+
+/*ATUALIZAÇÃO E USABILIDADE DA PÁGINA (SHOPIFY)*/
+
+main .cadastro button{
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    display: inline-block;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+main .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.699);
+    gap: 5px;
+  }
+
+main .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 10px;
+    margin-right: 80px;
+}
+
+main .img-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    margin-right: 20px;
+    flex: 1;
+    text-align: center;
+}
+main .img-sobre img {
+    border-radius: 10px;
+}
+
+main .text h1 {
+    line-height: 40px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    justify-content: left;
+}
+
+main .text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    display: block;
+    text-align: justify;
+    justify-content: left;
+}
+
+.shopify .text span {
+    color: #4d8323;
+}
+
+.shopify .cadastro button{
+    background-color: #4d8323;
+    color: #fff;
+}
+.shopify .cadastro button:hover {
+    box-shadow: 0px 0px 10px #4d8323;
+    transform: scale(1.07);
+}
+
+@media (max-width: 768px) {
+    main .flex {
+      flex-direction: column;
+    }
+  
+    main .text h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    main .text {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    main .cadastro button {
+      width: 100%;
+    }
+}
+
+/*ATUALIZAÇÃO E USABILIDADE DA PÁGINA (PAYPAL)*/
+
+.paypal .text span {
+    color: #013088;
+}
+
+.paypal .cadastro button{
+    background-color: #013088;
+    color: #fff;
+}
+.paypal .cadastro button:hover {
+    box-shadow: 0px 0px 10px #013088;
+    transform: scale(1.07);
+}
+
+/*ATUALIZAÇÃO E USABILIDADE DA PÁGINA (WIX)*/
+
+.wix .text span {
+    color: #000000;
+}
+
+.wix .cadastro button{
+    background-color: #000000;
+    color: #fff;
+}
+.wix .cadastro button:hover {
+    box-shadow: 0px 0px 10px #000000;
+    transform: scale(1.07);
+}
+
+/*ATUALIZAÇÃO E USABILIDADE DA PÁGINA (OLIST)*/
+
+.olist .text span {
+    color: #0c29d0;
+}
+
+.olist .cadastro button{
+    background-color: #0c29d0;
+    color: #fff;
+}
+.olist .cadastro button:hover {
+    box-shadow: 0px 0px 10px #0c29d0;
+    transform: scale(1.07);
+}
+
+/*ATUALIZAÇÃO E USABILIDADE DA PÁGINA (WAKE)*/
+
+.wake .text span {
+    color: #c505f2;
+}
+
+.wake .cadastro button{
+    background-color: #c505f2;
+    color: #fff;
+}
+.wake .cadastro button:hover {
+    box-shadow: 0px 0px 10px #c705f2;
+    transform: scale(1.07);
+}
+
+/*ATUALIZAÇÃO E USABILIDADE DA PÁGINA (NUVEMSHOP)*/
+
+.nuvemshop .text span {
+    color: #2c3357;
+}
+
+.nuvemshop .cadastro button{
+    background-color: #2c3357;
+    color: #fff;
+}
+.nuvemshop .cadastro button:hover {
+    box-shadow: 0px 0px 10px #2c3357;
+    transform: scale(1.07);
+}
